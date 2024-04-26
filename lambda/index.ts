@@ -1,7 +1,7 @@
 import * as url from "node:url";
 
 const main = async (
-  event: any
+  event: any,
 ): Promise<{ exists: boolean; statusCode: number }> => {
   const fs = await import("fs");
   const result = {
