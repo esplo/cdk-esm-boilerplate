@@ -12,6 +12,9 @@ export class CdkEsmBoilerplateStack extends cdk.Stack {
 
     new cdk.aws_lambda_nodejs.NodejsFunction(this, "testLambda", {
       entry: path.join(import.meta.dirname, "../lambda/index.ts"),
+      bundling: {
+        format: cdk.aws_lambda_nodejs.OutputFormat.ESM,
+      },
     });
   }
 }
